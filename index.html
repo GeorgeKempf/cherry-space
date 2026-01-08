@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cherry Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================
+     CABEÇALHO DO SITE
+========================= -->
+<header class="cabecalho">
+    <h1 class="logo">Cherry Space</h1>
+
+    <nav class="menu">
+        <a href="#" onclick="mostrarTela('space')">My Space</a>
+        <a href="#" onclick="mostrarTela('cherries')">Cherries</a>
+        <a href="#" onclick="mostrarTela('sobre')">Sobre</a>
+    </nav>
+</header>
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+<main class="conteudo">
+
+    <!-- LISTA DE ANOTAÇÕES -->
+    <section id="space" class="tela ativa">
+        <h2>My Cherries</h2>
+        <p>Todas suas cerejas 🍒</p>
+        <div id="listaAnotacoes"></div>
+    </section>
+
+    <!-- CRIAÇÃO DE NOVA ANOTAÇÃO -->
+    <section id="cherries" class="tela">
+        <h2>Cherries</h2>
+        <p>Crie novas cerejas 🍒</p>
+
+        <!-- BOTÃO FLUTUANTE DE CRIAÇÃO -->
+        <button class="cherry-btn" onclick="abrirModal()">
+            <div class="cherry">
+                <span class="plus">+</span>
+                <div class="stem"></div>
+                <div class="leaf"></div>
+            </div>
+        </button>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="tela">
+        <h2>Sobre o Cherry Space</h2>
+        <p>
+            Cherry Space é um app desenvolvido como projeto pessoal,
+            focado em simplicidade, carinho e organização 🍒❤️
+        </p>
+    </section>
+
+</main>
+
+<!-- =========================
+     MODAL DE ANOTAÇÃO
+========================= -->
+<div id="modal" class="modal">
+    <div class="modal-conteudo">
+        <h3>New Cherry 🍒</h3>
+
+        <textarea
+            id="textoAnotacao"
+            placeholder="Escreva sua cerejinha..."
+        ></textarea>
+
+        <div class="modal-botoes">
+            <button onclick="salvarAnotacao()">Salvar</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

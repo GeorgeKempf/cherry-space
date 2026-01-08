@@ -1,0 +1,198 @@
+/* =====================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: #1f1d1d;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: #8b273a;
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:nth-child(1) { margin-right: auto; }
+.menu a:nth-child(2) { margin: 0 auto; }
+.menu a:nth-child(3) { margin-left: auto; }
+
+/* =====================================
+   CONTEÚDO E TELAS
+===================================== */
+.conteudo {
+    padding: 30px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+/* =====================================
+   BOTÃO FLUTUANTE (CEREJA)
+===================================== */
+.cherry-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cherry {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at top left, #ff7a8a, #c9184a);
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: pulse 2s infinite;
+}
+
+.plus {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transform: translateY(2px);
+    pointer-events: none;
+}
+
+.stem {
+    position: absolute;
+    top: -17px;
+    left: 30px;
+    width: 6px;
+    height: 25px;
+    background-color: #5a3e2b;
+}
+
+.leaf {
+    position: absolute;
+    top: -14px;
+    left: 10px;
+    width: 18px;
+    height: 19px;
+    background-color: #2d6a4f;
+    border-radius: 0 100% 0 100%;
+    transform: rotate(-20deg);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* =====================================
+   MODAL
+===================================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.modal textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    resize: none;
+}
+
+.modal-botoes button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================================
+   ANOTAÇÕES
+===================================== */
+#listaAnotacoes {
+    margin-top: 20px;
+}
+
+.anotacao {
+    background: #ffe5ec;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* OPÇÕES */
+.opcoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.opcoes button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.opcoes button:first-child {
+    background: #449973;
+    color: #fff;
+}
+
+.opcoes button:last-child {
+    background: #8b273a;
+    color: #fff;
+}
